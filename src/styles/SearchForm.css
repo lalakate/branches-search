@@ -1,0 +1,178 @@
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inputs {
+    display: flex;
+    gap: 20px;
+    width: 70%;   
+}
+
+.input {
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    height: 5vh;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    word-break: break-all;
+    padding: 0 10px;
+}
+
+.input:focus {
+    outline: none;
+    border: 1px solid #3d8d40;
+}
+
+.input:hover {
+    border: 1px solid #3d8d40;
+    cursor: pointer;
+}
+
+.dropdown-list,
+.dropdown-listbox {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 10;
+    background: #fff;
+    border: 1px solid #ccc;
+    width: 100%;           
+    min-width: 0;          
+    overflow-y: auto;
+    list-style: none;      
+    margin: 0;
+    padding: 0;
+    max-height: 350px;
+    word-break: break-word; 
+    box-sizing: border-box; 
+}
+
+.dropdown-item {
+    padding: 6px 12px;
+    cursor: pointer;
+    white-space: normal;    /* разрешает перенос строк */
+    word-break: break-word; /* переносит длинные слова */
+}
+
+.region-input {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    width: 70%;
+}
+
+.service-select {
+    position: relative;
+    width: 70%;
+    box-sizing: border-box;
+    height: 5vh;
+    border-radius: 5px;
+    background: #fff;
+}
+
+input {
+    border: none;
+}
+
+.submit-button {
+    grid-area: submit;
+    width: 20%;
+    height: 5vh;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+}
+
+.submit-button:hover {
+    background-color: #3d8d40;
+    transition: 0.15s ease-in-out;
+}
+
+.submit-button:focus {
+    outline: none;
+}
+
+.checkboxes-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 30px;
+    width: 70%;
+}
+
+.checkboxes-container label {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.checkboxes-container label:hover {
+    cursor: pointer;
+    .custom-checkbox .checkmark {
+        border-color: #3d8d40;
+    }
+}
+
+.custom-checkbox {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    opacity: 0;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.custom-checkbox .checkmark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .checkmark {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+.custom-checkbox .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .checkmark:after {
+    display: block;
+}
+
+.custom-checkbox .checkmark:after {
+    left: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    border-radius: 1px;
+    transform: rotate(45deg);
+    content: "";
+}

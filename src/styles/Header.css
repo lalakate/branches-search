@@ -1,0 +1,13 @@
+.header {
+    background-color: #43a349;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    filter: brightness(0) invert(1);
+    width: 30%;
+    margin-left: 10px;
+}
