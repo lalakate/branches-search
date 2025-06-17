@@ -6,7 +6,7 @@
 
 .inputs {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     width: 70%;   
 }
 
@@ -53,8 +53,8 @@
 .dropdown-item {
     padding: 6px 12px;
     cursor: pointer;
-    white-space: normal;    /* разрешает перенос строк */
-    word-break: break-word; /* переносит длинные слова */
+    white-space: normal;    
+    word-break: break-word; 
 }
 
 .region-input {
@@ -175,4 +175,27 @@ input {
     border-radius: 1px;
     transform: rotate(45deg);
     content: "";
+}
+
+@media (width < 750px) {
+    .inputs {
+        flex-direction: column;
+    }
+
+    .region-input {
+        width: 100%;
+    }
+
+    .checkboxes-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .subtitle {
+        text-align: center;
+    }
+
+    .submit-button {
+        width: 40vw;
+    }
 }

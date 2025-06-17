@@ -17,6 +17,7 @@ function App() {
   const [branchServices, setBranchServices] = useState<Record<string, Record<string, string[]>>>({});
   const [loading, setLoading] = useState(true);
   const [selectedBranch, setSelectedBranch] = useState<Branch | null>(null);
+  const [isScrollButtonVisible, setIsScrollButtonVisible] = useState(false);
   const mapRef = useRef<any>(null);
 
   function logRequest(url: string) {
@@ -75,6 +76,23 @@ function App() {
         setLoading(false);
       }).catch(() => setLoading(false));
   }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isVisible = window.scrollY > 100;
+      if (isVisible !== isScrollButtonVisible)
+        setIsScrollButtonVisible(isVisible);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isScrollButtonVisible]);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   const handleSearch = (filters: {
     city: string;
@@ -201,7 +219,7 @@ function App() {
         services={services}
       />
       <div className="results">
-        <h3 >Найдено {filtered.length} структурных подразделений</h3>
+        <h3 className="subtitle">Найдено {filtered.length} структурных подразделений</h3>
         {filtered.length > 0 && (
           <table className="table">
             <thead>
@@ -358,6 +376,12 @@ function App() {
           </div>
         </div>
       )}
+      <button
+        onClick={scrollToTop}
+        className={`scroll-to-top-btn ${isScrollButtonVisible ? 'visible' : ''}`}
+        aria-label="Прокрутить вверх">
+          ^
+      </button>
     </div>
   );
 }
