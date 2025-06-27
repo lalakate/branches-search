@@ -1,0 +1,41 @@
+.currency-container {
+    background-color: #308615;
+    padding: 20px;
+    color: white;
+    width: 50%;
+}
+
+.currency-title {
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.currency-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.currency-info {
+    display: flex;
+    flex-direction: column;
+    color: #c6d6c1;
+}
+
+.currency-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    font-size: 2vh;
+}
+
+.currency-name {
+    font-weight: bold;
+}
+
+.currency-rate {
+    display: flex;
+    gap: 20px;
+    font-weight: bold;
+}
