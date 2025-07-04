@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/News.css';
+import '../styles/news.css';
 
 const newsApiURL = '/api/api/news_info'
 
@@ -34,7 +34,6 @@ const News: React.FC = () => {
         fetchNews();
     }, []);
 
-    // Автоматическое переключение слайдов каждые 5 секунд
     useEffect(() => {
         if (news.length === 0) return;
 
@@ -101,7 +100,6 @@ const News: React.FC = () => {
                     ))}
                 </div>
 
-                {/* Кнопки навигации */}
                 <button 
                     className="news-nav-button prev" 
                     onClick={prevSlide}
@@ -117,7 +115,6 @@ const News: React.FC = () => {
                     &#8250;
                 </button>
 
-                {/* Индикаторы */}
                 <div className="news-indicators">
                     {news.map((_, index) => (
                         <button

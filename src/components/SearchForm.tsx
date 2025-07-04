@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
-import '../styles/SearchForm.css'
-import { type SearchFormProps } from "../searchFormProps/searchFormProps";
+import '../styles/search-form.css'
+import { type SearchFormProps } from "../types/searchFormProps";
 
 export const SearchForm: React.FC<SearchFormProps> = ({
   onSearch,

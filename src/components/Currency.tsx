@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import '../styles/Currency.css'
+import '../styles/currency.css'
 
 const currencyApiURL = "/api/api/kurs_cards";
 

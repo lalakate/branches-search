@@ -39,3 +39,14 @@
     gap: 20px;
     font-weight: bold;
 }
+
+@media (width < 750px) {
+    .currency-container {
+        width: 100vw;
+    }
+
+    .currency-header {
+        margin-bottom: 15px;
+        font-size: 3vmin;
+    }
+}

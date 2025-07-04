@@ -3,9 +3,9 @@ import { SearchForm } from "./components/SearchForm";
 import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 import "./App.css";
 import "./styles/loader.css";
-import { type Branch } from "./api/branches";
-import { majorCities } from "./api/map";
-import { getMobileNumber, getWorkTime, isBranchOpenNow, worksOnWeekend, getLunchTime, formatStreetName } from "./api/information";
+import { type Branch } from "./types/branches";
+import { majorCities } from "./types/map";
+import { getMobileNumber, getWorkTime, isBranchOpenNow, worksOnWeekend, getLunchTime, formatStreetName } from "./types/information";
 
 function SearchPage() {
   const [branches, setBranches] = useState<Branch[]>([]);

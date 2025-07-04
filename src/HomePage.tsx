@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import "./styles/HomePage.css"
+import "./styles/home-page.css"
 import Currency from "./components/Currency";
 import News from "./components/News";
 

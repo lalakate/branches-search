@@ -41,3 +41,17 @@
     font-size: 3vh;
     font-weight: bold;
 }
+
+@media (width < 750px) {
+    .search-currency {
+        flex-direction: column;
+    }
+
+    .search-button {
+        width: 100vw;
+    }
+
+    .news {
+        height: 40vh;
+    }
+}
